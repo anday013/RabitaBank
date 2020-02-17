@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1170, initial-scale=1.0">
     <title>Rabitəbank</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -56,16 +56,51 @@
         </div>
     </header>
     <section class="slider">
-        <div class="container">
-            <div class="slider-content">
-                <div class="slider-content__left">
-                    <h3>Sevgililər günündə 10% cashback</h3>
-                    <p>Kartmane sahibləri üçün Sevgililər gününə özəl təklif!</p>
-                    <a href="#" class="slider__button">Daha Ətraflı</a>
+        <!-- <div class="container"> -->
+        <div class="slider-content" id="turner">
+            <div class="slider__element-wrapper">
+                <div class="slider__element">
+                    <div class="slider-content__left">
+                        <h3>Sevgililər günündə 10% cashback</h3>
+                        <p>Kartmane sahibləri üçün Sevgililər gününə özəl təklif!</p>
+                        <a href="#" class="slider__button">Daha Ətraflı</a>
+                    </div>
+                    <img src="src/img/14 slider.png" alt="" class="slider-image" width="400">
                 </div>
-                <img src="src/img/14 slider.png" alt="" class="slider-image" width="400">
+            </div>
+            <div class="slider__element-wrapper">
+                <div class="slider__element">
+                    <div class="slider-content__left">
+                        <h3>Sevgililər günündə 10% cashback</h3>
+                        <p>Kartmane sahibləri üçün Sevgililər gününə özəl təklif!</p>
+                        <a href="#" class="slider__button">Daha Ətraflı</a>
+                    </div>
+                    <img src="src/img/14 slider.png" alt="" class="slider-image" width="400">
+                </div>
+            </div>
+            <div class="slider__element-wrapper">
+                <div class="slider__element">
+                    <div class="slider-content__left">
+                        <h3>Sevgililər günündə 10% cashback</h3>
+                        <p>Kartmane sahibləri üçün Sevgililər gününə özəl təklif!</p>
+                        <a href="#" class="slider__button">Daha Ətraflı</a>
+                    </div>
+                    <img src="src/img/14 slider.png" alt="" class="slider-image" width="400">
+                </div>
             </div>
         </div>
+        <div class="dividers" id="dividers">
+            <div class="divider selected-divider" id="div1" onclick="return divider(event);">
+
+            </div>
+            <div class="divider" id="div2" onclick="return divider(event);">
+
+            </div>
+            <div class="divider" id="div3" onclick="return divider(event);">
+
+            </div>
+        </div>
+        <!-- </div> -->
     </section>
     <section class="general-info">
         <div class="container">
@@ -74,32 +109,97 @@
                     <img src="src/img/group-362x.png" alt="" width="102">
                     <h4>Fərdi kreditlər</h4>
                     <p>
-                    <strong>14.9%</strong>
-                    <br>
-                    -dan* başlayaraq</p>
+                        <strong>14.9%</strong>
+                        <br>
+                        -dan* başlayaraq</p>
                     <a href="#" class="block__button">Sifariş et →</a>
                 </div>
                 <div class="block">
                     <img src="src/img/group-362x.png" alt="" width="102">
                     <h4>Fərdi kreditlər</h4>
                     <p>
-                    <strong>30%</strong>
-                    <br>
-                    -dək cashback imkanı</p>
+                        <strong>30%</strong>
+                        <br>
+                        -dək cashback imkanı</p>
                     <a href="#" class="block__button">Sifariş et →</a>
                 </div>
                 <div class="block">
                     <img src="src/img/group-362x.png" alt="" width="102">
                     <h4>Fərdi kreditlər</h4>
                     <p>
-                    <strong>9%</strong>
-                    <br>
-                    -dək illik gəlir</p>
+                        <strong>9%</strong>
+                        <br>
+                        -dək illik gəlir</p>
                     <a href="#" class="block__button">Sifariş et →</a>
                 </div>
             </div>
         </div>
     </section>
+    <section id="mobile-app">
+        <div class="container">
+            <div class="slider" >
+                <div class="turner-contents" id="turner2">
+                    <div class="turner-content">
+                        <div class="left-side">
+                            <h4>Rabitabank Mobile</h4>
+                            <p>Rabitəbank Mobile ilə banka getməyə ehtiyac yoxdur, bankınız hər<br> zaman yanınızdadır!
+                            </p>
+                        </div>
+                        <div class="right-side">
+                            <img src="src/img/rabitabank-mobile-image@1x.png" alt="">
+                        </div>
+                    </div>
+                    <div class="turner-content">
+                        <div class="left-side">
+                            <h4>Rabitabank Mobile</h4>
+                            <p>Rabitəbank Mobile ilə banka getməyə ehtiyac yoxdur, bankınız hər<br> zaman yanınızdadır!
+                            </p>
+                        </div>
+                        <div class="right-side">
+                            <img src="src/img/rabitabank-mobile-image@1x.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dividers" id="dividers2">
+            <div class="divider selected-divider" id="div1" onclick="return divider2(event);">
+
+            </div>
+            <div class="divider" id="div2" onclick="return divider2(event);">
+
+            </div>
+        </div>
+    </section>
+    <section id="advantages">
+        <div class="container">
+            <div class="card-wrapper">
+                <div href="#" class="card">
+                    <img src="src/img/deposit card@2x.png" alt="" width="122">
+                    <span style="background-image: url('/src/img/Kartmane-hover.jpg')"></span>
+                    <p class="small-button">Kartmane</p>
+                    <h4>“Kartmane” ilə üstünlüklərlə yaşa</h4>
+                    <p class="sub-text">Bütün depozit və kart üstünlüklərini <br> bir arada topladıq</p>
+                </div>
+                <div href="#" class="card">
+                    <img src="src/img/deposit card@2x.png" alt="" width="122">
+                    <span style="background-image: url('/src/img/Kartmane-hover.jpg')"></span>
+                    <p class="small-button">Kartmane</p>
+                    <h4>“Kartmane” ilə üstünlüklərlə yaşa</h4>
+                    <p class="sub-text">Bütün depozit və kart üstünlüklərini <br> bir arada topladıq</p>
+                </div>
+                <div href="#" class="card">
+                    <img src="src/img/deposit card@2x.png" alt="" width="122">
+                    <span style="background-image: url('/src/img/Kartmane-hover.jpg')"></span>
+                    <p class="small-button">Kartmane</p>
+                    <h4>“Kartmane” ilə üstünlüklərlə yaşa</h4>
+                    <p class="sub-text">Bütün depozit və kart üstünlüklərini <br> bir arada topladıq</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>

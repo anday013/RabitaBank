@@ -21,10 +21,22 @@ ul{
 .menu-bar{
     
 }    
+header{
+    position:sticky;
+    top:0;
+    background-color: #fff;
+    z-index: 1;
+    
+}
+body{
+    min-width: 1170px;
+    height: 300vh;
+}
 .container{
     width: 1170px;
     display: block;
     margin: 0 auto;
+    height: 100%;
     
 }
 .top-header{
@@ -77,7 +89,7 @@ ul{
 }
 
 .second-header{
-    margin: 18px 0;
+    padding: 18px 0;
 }
 .links {
     display: flex;
@@ -100,28 +112,89 @@ ul{
 
 /*Slider Section*/
 section.slider{
+    position: relative;
     height: 494px;
     background-image: radial-gradient(circle at 90% 0px, rgb(110, 187, 32), rgb(18, 148, 80));
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }
+
 .slider h3{
     font-size: 40px;
     font-weight: 500;
     color: white
 }
 .slider-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* transform: translate(-100vw);
+    transition: transform 1s; */
+    
+}
+
+
+.slider__element-wrapper{
+    display: flex;
+    background-image: radial-gradient(circle at 90% 0px, rgb(110, 187, 32), rgb(18, 148, 80));
+    width: 100vw;
+    justify-content: center;
+
+}
+.slider__element{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     height: 494px;
     padding-left: 35px;
+    
+}
+
+.dividers{
+    background-color: rgb(0,0,0,0);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 15px;
+    left: calc( ((100% - 1170px) / 2) ) ;   
+    margin-left: 35px;
+    width: 107.5px;
+    height: 10px;
+}
+
+.divider{
+    cursor: pointer;
+    width: 32.5px;
+    height: 4px;
+    opacity: 0.3;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #fff;
+    font-size: 0;
+    transition: opacity 0.5s;
+}
+.divider:hover{
+    opacity: 0.8;
+}
+.divider:active{
+    opacity: 0.4;
+}
+.selected-divider{
+    opacity: 1;
 }
 
 .slider-content p{
     margin-top: 15px;
     color: #fff;
     font-size: 20px;
+    
 }
+
+
 
 .slider-content__left{
     align-self: center;
@@ -191,4 +264,176 @@ section.slider{
 }
 .block__button:hover{   
     background-color: #2e384d;
+}
+
+/*-----------------Mobile app---------------*/
+section#mobile-app{
+    position: relative;
+    height: 450px;
+}
+
+section#mobile-app .slider{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100%;
+    background-color: #F9FAFB;
+    overflow: hidden;
+}
+
+section#mobile-app .turner-contents{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* overflow: hidden; */
+    
+}
+
+section#mobile-app .turner-content{
+    padding: 0 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 1170px;
+}
+section#mobile-app .left-side{
+    width: 100%;   
+ }
+
+section#mobile-app .right-side{
+   align-self: flex-end;    
+}
+
+#mobile-app h4{
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #2e384d;
+}
+#mobile-app p{
+    opacity: 0.6;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #15334a;
+    margin-top: 12px;
+    width: 90%;
+}
+
+#mobile-app .dividers{
+    width: 75px;
+    bottom: 40px;
+    margin-left: 53px;
+}
+#mobile-app .divider{
+    opacity: 0.13;
+    background-color: #708390;
+}
+#mobile-app .selected-divider{
+    opacity: 0.45;
+}
+
+
+/*-------------Advantages-------------*/
+section#advantages{
+    margin-top: 40px;
+    height: 344px;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #f8fafb;
+    width: 370px;
+    height: 100%;
+    padding: 0 36px 36px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.card span{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.card:hover span{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* .card:hover{
+    background: url("/src/img/Kartmane-hover.jpg") no-repeat center;
+    background-size: cover;
+} */
+.card:hover img{
+    display: none;
+}
+
+.card:hover h4, .card:hover p,.card:hover .small-button{
+    color: white;
+    z-index: 0;
+}
+
+.card:hover .small-button{
+    border-color: white;
+}
+
+.card img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.card h4{   
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #2e384d;
+    margin-top: 26px;
+}
+.card p .sub-text{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #708390;
+    margin-top: 10px;
+}
+
+.small-button{
+    width: 100px;
+    color: #6ebb20;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px 20px;
+    border: 1px solid #6ebb20;
+    font-weight: bold;
+    border-radius: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.67px;
 }
